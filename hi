@@ -1,0 +1,90 @@
+// Import Google Font
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+
+// Define color variables
+$primary-color: #0d0d0d;
+$secondary-color: #ffffff;
+$button-bg: #1a1a1a;
+$button-hover: #333333;
+
+// Global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: $secondary-color;
+}
+
+// Header and Navigation
+header {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 5%;
+        background-color: $secondary-color;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+        // Navigation Links
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: $primary-color;
+                    font-size: 16px;
+                    font-weight: 500;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: $button-bg;
+                    }
+                }
+            }
+        }
+
+        // Navigation Buttons
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+
+            .login-btn {
+                background-color: $button-bg;
+                color: $secondary-color;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: $button-hover;
+                }
+            }
+
+            .donate-btn {
+                background: none;
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
