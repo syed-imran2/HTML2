@@ -23,11 +23,10 @@ body {
 
 // Header and Navigation
 header {
-    .navbar{
+    .nav{
         display: flex;
         justify-content: flex-end; // Pushes all content to the right
         height: 117px;
-        width: 1440px;
         padding: 15px 5%;
         background-color: $secondary-color;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -37,7 +36,7 @@ header {
         margin-bottom: 15px;
 
         // Navigation Links
-        .nav-links {
+        &__links {
             list-style: none;
             display: flex;
             gap: 20px;
@@ -58,11 +57,11 @@ header {
         }
 
         // Navigation Buttons
-        .nav-buttons {
+        &__buttons {
             display: flex;
             gap: 15px;
 
-            .login-btn {
+            .login__btn {
                 background-color: $button-bg;
                 color: $secondary-color;
                 border: none;
@@ -76,7 +75,7 @@ header {
                 }
             }
 
-            .donate-btn {
+            .donate__btn {
                 background: none;
                 border: 2px solid $primary-color;
                 color: $primary-color;
@@ -97,8 +96,8 @@ header {
 // Define additional color variables
 $blue-bg: #102364; // You can adjust the blue shade as needed
 
-// Hero Section (Blue Box)
-.hero-section {
+// Banner Section (Blue Box)
+.Banner {
   background-color: $blue-bg;
   color: $secondary-color; // Uses your white color from above
   display: flex;
@@ -110,46 +109,39 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
 
 
   // For responsiveness: stack on smaller screens
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-  }
+  //@media (max-width: 768px) {
+    //flex-direction: column;
+    //text-align: center;
+  //}
 
-  .hero-content {
-    max-width: 50%;
+  &__Head{
+    //max-width: 50%;
+    width: 685;
+    height: 218;
+    top: 239px;
+    left: 177px;
+
 
     h1 {
       font-family: roboto, sans serif;
-      font-size: 3rem;
+      font-size: 64px;
+      font-weight: 900;
       margin-bottom: 20px;
     }
 
     p {
       font-family: roboto, sans serif;
-      font-size: 1.2rem;
+      font-size: 18px;
+      font-weight: 900;
       margin-bottom: 30px;
       line-height: 1.5;
     }
 
-    .hero-btn {
-      font-family: roboto, sans serif;
-      background-color: $secondary-color;
-      color: $blue-bg;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-
-      &:hover {
-        background-color: lighten($secondary-color, 10%);
-        color: darken($blue-bg, 10%);
-      }
-    }
+    
   }
 
-  .hero-image {
-    max-width: 40%;
+  &__image {
+    //max-width: 40%;
 
     img {
       width: 100%;
@@ -186,7 +178,8 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
         border-radius: 8px;
         object-fit: cover;
       }
-    }
+      
+  }
   
     .event-section-right {
       background-color: #fff;
@@ -213,7 +206,6 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
           display: flex;
           gap: 1rem; // spacing between each box
           flex-wrap: wrap; // allows them to wrap on smaller screens if needed
-    
           .countdown-item {
             background-color: #f7f7f7;
             border: 1px solid #ddd;
