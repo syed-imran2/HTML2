@@ -267,3 +267,296 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
       }
     }
   }
+
+.cards{
+  display: grid;
+  place-items: center;
+  .cards-container {
+    
+    display: grid;
+    /* 
+      auto-fill + minmax ensures responsive columns.
+      Each card is at least 250px wide, then 1fr expands
+      to fill remaining space in the row.
+    */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;  // space between cards
+    width: 100%;
+    max-width: 1109px; // optional max width*/
+
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  
+    .card-image {
+      position: relative;
+  
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+  
+      /* Optional share icon if you want it here
+      .share-icon {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: rgba(255,255,255,0.8);
+        padding: 0.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  
+        i {
+          font-size: 1rem;
+          color: $primary-color;
+        }
+  
+        &:hover {
+          background-color: rgba(255,255,255,1);
+        }
+      }
+      */
+    }
+  
+    .card-content {
+      padding: 1rem;
+  
+      h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: $primary-color;
+      }
+  
+      .card-date,
+      .card-location {
+        font-size: 0.9rem;
+        color: #666;
+      }
+    }
+  }
+  
+  /* ==========================================
+     3) Load More Container
+     ========================================== */
+  .load-more-container {
+    /* centers the image within this container */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #EDEDED;
+    width: 285px;
+    height: 70px;
+    border-radius: 10px;
+    border-width: 1px;
+    margin:100px;
+    &:hover{
+      color: black;
+    }
+    .Load__more{
+      width:100%;
+      color: red;
+      border:none;
+      font-size: 20px;
+      font-weight: 800;
+    }
+  }
+
+}
+
+
+
+
+
+/* ================ SWAG SECTION ================ */
+.swag-section {
+  display: flex;
+  flex-direction: column;   // stack yellow-part, button, black-part
+  align-items: center;      // center them horizontally
+  width: 100%;
+
+  /* ---------- Yellow Part ---------- */
+  .yellow-part {
+    width:1440px;
+    background-color: yellow;
+    padding: 40px 5%;
+    text-align: center; // center text in this section
+
+    .heading-container {
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 2rem;
+        color: $primary-color;
+        margin-bottom: 10px;
+      }
+      .tag{
+        
+        .head2 {
+          font-size: 1.5rem;
+          color: $primary-color;
+      }
+    }
+    }
+
+    .content-container {
+      display: flex;
+      //max-width: 800px; // limit content width
+      //margin: 0 auto;
+      .para{
+        .para1{
+          font-size: 34px;
+          color: black;
+          line-height: 50px;
+          text-align: left;
+        }
+        .para2{
+          font-size: 34px;
+          color: red;
+          line-height: 50px;
+          text-align: left;
+        }
+      }
+      .rotimg {
+        width: 370px;
+        height: 370px;
+      }
+    }
+  }
+
+  /* ---------- Bridge Button ---------- */
+  .bridge-btn {
+    background-color: pink;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 20px auto; // space above & below, center horizontally
+    border-radius: 6px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken(pink, 10%);
+    }
+  }
+
+  /* ---------- Black Part ---------- */
+  .black-part {
+    background-color: black;
+    width: 100%;
+    padding: 40px 5%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;        // wrap blocks on smaller screens
+    justify-content: center;
+    gap: 40px;              // spacing between inner containers
+    text-align: center;
+
+    // Newsletter block
+    .newsletter-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+
+      .newsletter-inputs {
+        display: flex;
+        gap: 10px;
+
+        // Email input
+        input[type="email"] {
+          padding: 10px;
+          font-size: 1rem;
+          border: none;
+          border-radius: 4px;
+          min-width: 220px;
+        }
+
+        // Subscribe button
+        .subscribe-btn {
+          background-color: pink;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 1rem;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: darken(pink, 10%);
+          }
+        }
+      }
+    }
+
+    // Links
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+
+      p {
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    // Social Icons
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+/* ================ FOOTER SECTION ================ */
+.footer-section {
+  background-color: white;
+  text-align: center;
+  padding: 20px 5%;
+
+  hr {
+    margin-bottom: 10px;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color:#8DA1A1;
+    ;
+  }
+}
