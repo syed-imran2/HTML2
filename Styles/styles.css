@@ -85,6 +85,7 @@ header .nav__buttons .donate__btn:hover {
   height: 218;
   top: 239px;
   left: 177px;
+  text-align: left;
 }
 .Banner__Head h1 {
   font-family: roboto, sans serif;
@@ -298,154 +299,207 @@ header .nav__buttons .donate__btn:hover {
   font-weight: 800;
 }
 
-/* ================ SWAG SECTION ================ */
+/* =========================================
+ SWAG SECTION
+ ========================================= */
 .swag-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  /* ---------- Yellow Part ---------- */
-  /* ---------- Bridge Button ---------- */
-  /* ---------- Black Part ---------- */
-}
-.swag-section .yellow-part {
-  width: 1440px;
-  background-color: yellow;
-  padding: 40px 5%;
+  background-color: #ffd95c;
   text-align: center;
+  padding: 40px 5% 120px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
 }
-.swag-section .yellow-part .heading-container {
+.swag-section h1 {
+  font-size: 75px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  color: #F33C5C;
   margin-bottom: 20px;
 }
-.swag-section .yellow-part .heading-container h2 {
-  font-size: 2rem;
+.swag-section .tag-background {
+  display: inline-block;
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
   color: #0d0d0d;
-  margin-bottom: 10px;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  transform: rotate(-4.6deg);
+  background: url("/images/yellow__tag.png") no-repeat center/cover;
 }
-.swag-section .yellow-part .heading-container .tag .head2 {
-  font-size: 1.5rem;
-  color: #0d0d0d;
-}
-.swag-section .yellow-part .content-container {
+.swag-section .swagcontainer {
   display: flex;
-}
-.swag-section .yellow-part .content-container .para .para1 {
-  font-size: 34px;
-  color: black;
-  line-height: 50px;
-  text-align: left;
-}
-.swag-section .yellow-part .content-container .para .para2 {
-  font-size: 34px;
-  color: red;
-  line-height: 50px;
-  text-align: left;
-}
-.swag-section .yellow-part .content-container .rotimg {
-  width: 370px;
-  height: 370px;
-}
-.swag-section .bridge-btn {
-  background-color: pink;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin: 20px auto;
-  border-radius: 6px;
-  transition: background-color 0.3s;
-}
-.swag-section .bridge-btn:hover {
-  background-color: #ff8da1;
-}
-.swag-section .black-part {
-  background-color: black;
-  width: 100%;
-  padding: 40px 5%;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  text-align: center;
-}
-.swag-section .black-part .newsletter-container {
-  display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 60px;
+  padding: 0 20px;
 }
-.swag-section .black-part .newsletter-container h3 {
-  font-size: 1.4rem;
+.swag-section .swagcontainer .swag-text {
+  max-width: 60%;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+}
+.swag-section .swagcontainer .swag-text p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #0d0d0d;
   margin-bottom: 1rem;
 }
-.swag-section .black-part .newsletter-container .newsletter-inputs {
-  display: flex;
-  gap: 10px;
+.swag-section .swagcontainer .swag-text #two {
+  color: #F33C5C;
 }
-.swag-section .black-part .newsletter-container .newsletter-inputs input[type=email] {
-  padding: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  min-width: 220px;
+.swag-section .swagcontainer .duck-container {
+  flex: 0 0 auto;
 }
-.swag-section .black-part .newsletter-container .newsletter-inputs .subscribe-btn {
-  background-color: pink;
-  color: white;
+.swag-section .swagcontainer .duck-container img {
+  width: 220px;
+  height: auto;
+}
+.swag-section #triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  background-color: red;
+  position: absolute;
+  z-index: 5;
+}
+.swag-section .join-button {
+  background-color: #f25b84;
+  color: #ffffff;
   border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px 40px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 20px auto 90px;
+  display: block;
+  position: relative;
 }
-.swag-section .black-part .newsletter-container .newsletter-inputs .subscribe-btn:hover {
-  background-color: #ff8da1;
-}
-.swag-section .black-part .links-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-}
-.swag-section .black-part .links-container p {
-  font-size: 1rem;
-  cursor: pointer;
-}
-.swag-section .black-part .links-container p:hover {
-  text-decoration: underline;
-}
-.swag-section .black-part .social-icons {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-.swag-section .black-part .social-icons img {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: transform 0.3s;
-}
-.swag-section .black-part .social-icons img:hover {
-  transform: scale(1.05);
+.swag-section .join-button:hover {
+  background-color: #ee2c61;
 }
 
-/* ================ FOOTER SECTION ================ */
+/* =========================================
+ FOOTER SECTION
+ ========================================= */
 .footer-section {
-  background-color: white;
-  text-align: center;
-  padding: 20px 5%;
+  background-color: #0B2A2B;
+  color: #ffffff;
+  padding: 80px 5% 40px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.footer-section .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.footer-section .footer-content .footer-left {
+  flex: 1 1 60%;
+  margin-right: 20px;
+}
+.footer-section .footer-content .footer-left h3 {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.footer-section .footer-content .footer-left .newsletter-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+.footer-section .footer-content .footer-left .newsletter-box input[type=email] {
+  padding: 12px;
+  border: 1px solid #333;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #ffffff;
+  flex: 1;
+}
+.footer-section .footer-content .footer-left .newsletter-box input[type=email]::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-section .footer-content .footer-left .newsletter-box input[type=email]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer-section .footer-content .footer-left .newsletter-box .subscribe-btn {
+  background-color: #f25b84;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.footer-section .footer-content .footer-left .newsletter-box .subscribe-btn:hover {
+  background-color: #ee2c61;
+}
+.footer-section .footer-content .footer-left .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-section .footer-content .footer-left .footer-links p {
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.footer-section .footer-content .footer-left .footer-links p:hover {
+  text-decoration: underline;
+}
+.footer-section .footer-content .footer-right {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.footer-section .footer-content .footer-right img {
+  max-width: 100%;
+  height: auto;
 }
 .footer-section hr {
-  margin-bottom: 10px;
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #333;
+  margin-bottom: 20px;
 }
-.footer-section p {
-  font-size: 0.9rem;
-  color: #8DA1A1;
+.footer-section .footer-note {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .swag-section, .footer-section {
+    width: 100%;
+    margin-left: 0;
+  }
+  .swagcontainer {
+    flex-direction: column;
+  }
+  .swagcontainer .swag-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-content .footer-left, .footer-content .footer-right {
+    flex: 1 1 100%;
+  }
+  .footer-content .footer-right {
+    justify-content: center;
+    margin-top: 40px;
+  }
 }/*# sourceMappingURL=styles.css.map */

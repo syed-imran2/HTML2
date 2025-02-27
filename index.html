@@ -27,7 +27,7 @@
         <div class="Banner__Head">
           <h1>Nullcast is a Series of Events</h1>
           <p>
-Get the latest scoop from the world of development with the latest news, hacks, tricks, and more on javascript, machine learning, enterprise architecture and more
+            Get the latest scoop from the world of development with the latest news, hacks, tricks, and more on javascript, machine learning, enterprise architecture and more
           </p>
         </div>
         <div class="Banner__image">
@@ -220,88 +220,64 @@ Get the latest scoop from the world of development with the latest news, hacks, 
 
 
 
-  <!-- MAIN SWAG SECTION -->
   <section class="swag-section">
-    <!-- YELLOW PART -->
-    <div class="yellow-part">
-      <!-- Headings -->
-      <div class="heading-container">
-        <h2>WANT #SWAG?</h2>
-        <div class="tag">
-          <img src="images/image 6.png" alt="yellow tag" />
-          <div class="head2">
-            <h3>JOIN OUR MONTHLY RAFFLE!</h3>
-          </div>
-        </div>
-      </div>
-
-      <!-- Text & Rotating Image -->
-      <div class="content-container">
-        <div class="para">
-          <div class="para1">
-            <p>
-              One Lucky Duck gets free swag shipped to their doorstep, 
-              wherever in the world they may be. All you have to do is join 
-              our Discord channel today and tweet about the amazing things 
-              we do. #nullcast #luckyduck
-            </p>
-          </div>
-          <div class="para2">
-            <p>
-              We will announce the winners on Twitter and through our 
-              Discord channel.
-            </p>
-          </div>
-        </div>
-
-        <!-- Rotating Duck Image -->
-        <div class="rotimg">
-        <img src="images/Duck 198.svg" alt="Rubber Duck" />
-          </div>
-      </div>
+    <h1>WANT #SWAG?</h1>
+    
+    <!-- Sub-head with background tag image -->
+    <h2 class="tag-background">JOIN OUR MONTHLY RAFFLE!</h2>
+    
+    <!-- Container for the two paragraphs -->
+    <div class="swagcontainer">
+    <div class="swag-text">
+      <p id="one">
+        One Lucky Duck gets free swag shipped to their doorstep, 
+        wherever in the world they may be. All you have to do is join 
+        our Discord channel today and tweet about the amazing things 
+        we do. #nullcast #luckyduck
+      </p>
+      <p id="two">
+        We will announce the winners on Twitter and through our 
+        Discord channel.
+      </p>
     </div>
-
-    <!-- BRIDGE BUTTON (connects yellow & black parts) -->
-    <button class="bridge-btn">JOIN OUR COMMUNITY</button>
-
-    <!-- BLACK PART -->
-    <div class="black-part">
-      <!-- Newsletter Signup -->
-      <div class="newsletter-container">
-        <h3>Subscribe Our Newsletter</h3>
-        <div class="newsletter-inputs">
-          <input 
-            type="email" 
-            placeholder="Enter your mail" 
-            aria-label="Email Address"
-          />
-          <button class="subscribe-btn">SUBSCRIBE</button>
-        </div>
-      </div>
-
-      <!-- Useful Links -->
-      <div class="links-container">
-        <p>What the Ducks?</p>
-        <p>Curriculum</p>
-        <p>Leaderboard</p>
-        <p>Write...</p>
-      </div>
-
-      <!-- Social Icons -->
-      <div class="social-icons">
-        <img src="path/to/linkedin.png" alt="LinkedIn" />
-        <img src="path/to/twitter.png" alt="Twitter" />
-        <img src="path/to/other.png" alt="Other Social Icon" />
-      </div>
+    
+    <!-- Duck image in its own div -->
+    <div class="duck-container">
+      <img src="/images/Duck 198.svg" alt="Rubber Duck" />
     </div>
+    </div>
+    <div class="triangle"></div>
+    <button class="join-button">JOIN OUR COMMUNITY</button>
+ 
+    
   </section>
 
-  <!-- FOOTER SECTION -->
-  <footer class="footer-section">
+  <!-- ========== FOOTER SECTION ========== -->
+  <section class="footer-section">
+    <div class="footer-content">
+      <!-- Left column: Newsletter & Links -->
+      <div class="footer-left">
+        <h3>Subscribe Our Newsletter</h3>
+        <div class="newsletter-box">
+          <input type="email" placeholder="Enter your mail" />
+          <button class="subscribe-btn">SUBSCRIBE</button>
+        </div>
+
+        <div class="footer-links">
+          <p>What the Ducks?</p>
+          <p>Curriculum</p>
+          <p>Leaderboard</p>
+          <p>Write...</p>
+        </div>
+      </div>
+
+      <!-- Right column: Three-logos image -->
+      <div class="footer-right">
+        <img src="/images/Three logos.png" alt="Three Social Logos" />
+      </div>
+    </div>
+
+    <!-- Horizontal line & final text -->
     <hr />
-    <p>MADE WITH ❤️ BY nullcast docs</p>
-  </footer>
-
-</body>
-</html>
-
+    <p class="footer-note">MADE WITH ❤️ BY nullcast docs</p>
+  </section>

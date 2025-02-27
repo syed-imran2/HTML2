@@ -120,6 +120,7 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
     height: 218;
     top: 239px;
     left: 177px;
+    text-align: left;
 
 
     h1 {
@@ -374,189 +375,263 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
 
 
 
+// Color variables
+$yellow-bg: #ffd95c; // yellow background color
+$dark-bg: #0B2A2B; // dark teal background for footer
+$primary-color: #0d0d0d; // text color on yellow
+$white: #ffffff;
+$accent-color: #f25b84; // for buttons
+$pink-text: #F33C5C; // for headings and accent text
 
-/* ================ SWAG SECTION ================ */
+/* =========================================
+ SWAG SECTION
+ ========================================= */
 .swag-section {
-  display: flex;
-  flex-direction: column;   // stack yellow-part, button, black-part
-  align-items: center;      // center them horizontally
+  background-color: $yellow-bg;
+  text-align: center;
+  padding: 40px 5% 120px; // Added more bottom padding for button and wave
   width: 100%;
-
-  /* ---------- Yellow Part ---------- */
-  .yellow-part {
-    width:1440px;
-    background-color: yellow;
-    padding: 40px 5%;
-    text-align: center; // center text in this section
-
-    .heading-container {
-      margin-bottom: 20px;
-
-      h2 {
-        font-size: 2rem;
-        color: $primary-color;
-        margin-bottom: 10px;
-      }
-      .tag{
-        
-        .head2 {
-          font-size: 1.5rem;
-          color: $primary-color;
-      }
-    }
-    }
-
-    .content-container {
-      display: flex;
-      //max-width: 800px; // limit content width
-      //margin: 0 auto;
-      .para{
-        .para1{
-          font-size: 34px;
-          color: black;
-          line-height: 50px;
-          text-align: left;
-        }
-        .para2{
-          font-size: 34px;
-          color: red;
-          line-height: 50px;
-          text-align: left;
-        }
-      }
-      .rotimg {
-        width: 370px;
-        height: 370px;
-      }
-    }
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative; // For button and wave positioning
+  
+  // Main heading
+  h1 {
+    font-size: 75px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    color: $pink-text;
+    margin-bottom: 20px;
   }
-
-  /* ---------- Bridge Button ---------- */
-  .bridge-btn {
-    background-color: pink;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    margin: 20px auto; // space above & below, center horizontally
-    border-radius: 6px;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: darken(pink, 10%);
-    }
+  
+  // Sub-head with a tag background
+  .tag-background {
+    display: inline-block;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    color: $primary-color;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    transform: rotate(-4.6deg);
+    background: url("/images/yellow__tag.png") no-repeat center/cover;
   }
-
-  /* ---------- Black Part ---------- */
-  .black-part {
-    background-color: black;
-    width: 100%;
-    padding: 40px 5%;
-    color: white;
+  
+  // Container for paragraphs and duck image
+  .swagcontainer {
     display: flex;
-    flex-wrap: wrap;        // wrap blocks on smaller screens
-    justify-content: center;
-    gap: 40px;              // spacing between inner containers
-    text-align: center;
-
-    // Newsletter block
-    .newsletter-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      h3 {
-        font-size: 1.4rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px; // Space before the button
+    padding: 0 20px;
+    
+    // Container for paragraphs
+    .swag-text {
+      max-width: 60%;
+      text-align: left;
+      font-family: 'Roboto', sans-serif;
+      
+      p {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: $primary-color;
         margin-bottom: 1rem;
       }
+      
+      // Special styling for announcement text (the second paragraph)
+      #two {
+        color: $pink-text;
+      }
+    }
+    
+    // Duck image container
+    .duck-container {
+      flex: 0 0 auto;
+      
+      img {
+        width: 220px;
+        height: auto;
+      }
+    }
+  }
+  //triangle
+  #triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    background-color: red;
+    position: absolute;
+    z-index: 5;
+  }
+  
+  // Join button - positioned above the wave
+  .join-button {
+    background-color: $accent-color;
+    color: $white;
+    border: none;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px auto 90px; // Increased bottom margin to place above wave
+    display: block;
+    position: relative;
+    //z-index: 10; // Ensure button is above the wave
+    
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}
+  
 
-      .newsletter-inputs {
+  
+
+/* =========================================
+ FOOTER SECTION
+ ========================================= */
+.footer-section {
+  background-color: $dark-bg;
+  color: $white;
+  padding: 80px 5% 40px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  
+  // Outer container for left & right columns
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    
+    // Left column: newsletter + links
+    .footer-left {
+      flex: 1 1 60%;
+      margin-right: 20px;
+      
+      h3 {
+        font-size: 48px;
+        font-weight: 900;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      
+      // Newsletter box: input + button
+      .newsletter-box {
         display: flex;
         gap: 10px;
-
-        // Email input
+        margin-bottom: 30px;
+        max-width: 400px;
+        
         input[type="email"] {
-          padding: 10px;
-          font-size: 1rem;
-          border: none;
+          padding: 12px;
+          border: 1px solid #333;
+          background-color: transparent;
           border-radius: 4px;
-          min-width: 220px;
+          color: $white;
+          flex: 1;
+          
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+          }
         }
-
-        // Subscribe button
+        
         .subscribe-btn {
-          background-color: pink;
-          color: white;
+          background-color: $accent-color;
+          color: $white;
           border: none;
-          padding: 10px 20px;
-          font-size: 1rem;
+          padding: 12px 20px;
           border-radius: 4px;
           cursor: pointer;
-          transition: background-color 0.3s;
-
+          font-weight: 600;
+          text-transform: uppercase;
+          transition: 0.3s;
+          
           &:hover {
-            background-color: darken(pink, 10%);
+            background-color: darken($accent-color, 10%);
+          }
+        }
+      }
+      
+      // Footer links
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        
+        p {
+          cursor: pointer;
+          font-size: 16px;
+          text-transform: uppercase;
+          
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
     }
-
-    // Links
-    .links-container {
+    
+    // Right column: Social media icons
+    .footer-right {
+      flex: 1 1 30%;
       display: flex;
-      flex-direction: column;
-      gap: 8px;
+      justify-content: flex-end;
       align-items: center;
-
-      p {
-        font-size: 1rem;
-        cursor: pointer;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    // Social Icons
-    .social-icons {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-
+      
       img {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: transform 0.3s;
-
-        &:hover {
-          transform: scale(1.05);
-        }
+        max-width: 100%;
+        height: auto;
       }
     }
+  }
+  
+  // Horizontal line
+  hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin-bottom: 20px;
+  }
+  
+  // Final text line
+  .footer-note {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
   }
 }
 
-/* ================ FOOTER SECTION ================ */
-.footer-section {
-  background-color: white;
-  text-align: center;
-  padding: 20px 5%;
-
-  hr {
-    margin-bottom: 10px;
-    border: none;
-    border-top: 1px solid #ccc;
+// Media queries for responsiveness
+@media (max-width: 992px) {
+  .swag-section, .footer-section {
+    width: 100%;
+    margin-left: 0;
   }
-
-  p {
-    font-size: 0.9rem;
-    color:#8DA1A1;
-    ;
+  
+  .swagcontainer {
+    flex-direction: column;
+    
+    .swag-text {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .footer-content {
+    .footer-left, .footer-right {
+      flex: 1 1 100%;
+    }
+    
+    .footer-right {
+      justify-content: center;
+      margin-top: 40px;
+    }
   }
 }
