@@ -358,30 +358,23 @@ header .nav__buttons .donate__btn:hover {
   width: 220px;
   height: auto;
 }
-.swag-section #triangle {
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 100px solid red;
-  background-color: red;
-  position: absolute;
-  z-index: 5;
-}
 .swag-section .join-button {
-  background-color: #f25b84;
+  background-color: #F13E5D;
   color: #ffffff;
   border: none;
   border-radius: 8px;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 800;
   text-transform: uppercase;
   padding: 15px 40px;
   cursor: pointer;
   transition: background-color 0.3s;
   margin: 20px auto 90px;
   display: block;
-  position: relative;
+  position: absolute;
+  left: 38%;
+  top: 575px;
+  z-index: 10;
 }
 .swag-section .join-button:hover {
   background-color: #ee2c61;
@@ -397,6 +390,27 @@ header .nav__buttons .donate__btn:hover {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+}
+.footer-section .triangle-below {
+  width: 0px;
+  height: 0px;
+  border-left: 720px solid transparent;
+  border-right: 720px solid transparent;
+  border-bottom: 110px solid #FFEC97;
+  position: absolute;
+  left: 0px;
+  top: -115px;
+}
+.footer-section .triangle-above {
+  width: 0px;
+  height: 0px;
+  border-left: 720px solid transparent;
+  border-right: 720px solid transparent;
+  border-bottom: 85px solid #0B2A2B;
+  position: absolute;
+  left: 0px;
+  top: -83px;
 }
 .footer-section .footer-content {
   display: flex;
