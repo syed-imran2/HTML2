@@ -19,15 +19,38 @@ header .nav {
   background-color: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   gap: 30px;
-  margin-left: 41px;
+  /*margin-left: 41px;
   margin-right: 76px;
-  margin-bottom: 15px;
+  margin-bottom: 15px;*/
+  margin: 0 auto;
+  max-width: 1440px;
+}
+@media screen and (max-width: 768px) {
+  header .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    padding: 20px 5%;
+  }
 }
 header .nav__links {
   list-style: none;
   display: flex;
   gap: 20px;
   align-items: center;
+  margin-right: 130px;
+}
+@media screen and (max-width: 768px) {
+  header .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    padding: 20px 5%;
+  }
 }
 header .nav__links li a {
   text-decoration: none;
@@ -77,8 +100,8 @@ header .nav__buttons .donate__btn:hover {
   align-items: center;
   justify-content: space-between;
   padding: 60px 4%;
-  margin-left: 41px;
-  margin-right: 76px;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 .Banner__Head {
   width: 685;
@@ -112,7 +135,9 @@ header .nav__buttons .donate__btn:hover {
   justify-content: center;
   padding: 40px 5%;
   background-color: #f9f9f9;
-  gap: 20px;
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 @media (max-width: 768px) {
   .event-section {
@@ -124,6 +149,7 @@ header .nav__buttons .donate__btn:hover {
   flex: 1;
   display: flex;
   justify-content: center;
+  max-width: 400px;
 }
 .event-section .event-image img {
   width: 100%;
@@ -136,11 +162,9 @@ header .nav__buttons .donate__btn:hover {
 .event-section .event-section-right {
   background-color: #fff;
   padding: 20px 5%;
-  margin: 20px auto;
-  max-width: 900px;
+  max-width: 670px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-right: 45px;
 }
 .event-section .event-section-right .event-right-content {
   display: flex;
@@ -210,9 +234,8 @@ header .nav__buttons .donate__btn:hover {
 .cards {
   display: grid;
   place-items: center;
-  /* ==========================================
-     3) Load More Container
-     ========================================== */
+  margin: 0 auto;
+  max-width: 1440px;
 }
 .cards .cards-container {
   display: grid;
@@ -233,9 +256,6 @@ header .nav__buttons .donate__btn:hover {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-.cards .card .card-image {
-  position: relative;
   /* Optional share icon if you want it here
   .share-icon {
     position: absolute;
@@ -258,25 +278,38 @@ header .nav__buttons .donate__btn:hover {
   }
   */
 }
-.cards .card .card-image img {
-  width: 100%;
-  height: auto;
-  display: block;
+.cards .card .card-image {
+  position: relative;
+  /*img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;*/
 }
-.cards .card .card-content {
+.cards .card .card-image .icon {
+  position: absolute;
+  max-width: 47px;
+  top: 5px;
+  right: 20px;
+}
+.cards .card-content {
   padding: 1rem;
 }
-.cards .card .card-content h3 {
+.cards .card-content h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: #0d0d0d;
 }
-.cards .card .card-content .card-date,
-.cards .card .card-content .card-location {
+.cards .card-content .card-date,
+.cards .card-content .card-location {
   font-size: 0.9rem;
   color: #666;
 }
-.cards .load-more-container {
+
+/* ==========================================
+   3) Load More Container
+   ========================================== */
+.load-more-container {
   /* centers the image within this container */
   display: flex;
   justify-content: center;
@@ -288,10 +321,10 @@ header .nav__buttons .donate__btn:hover {
   border-width: 1px;
   margin: 100px;
 }
-.cards .load-more-container:hover {
+.load-more-container:hover {
   color: black;
 }
-.cards .load-more-container .Load__more {
+.load-more-container .Load__more {
   width: 100%;
   color: red;
   border: none;
@@ -393,7 +426,7 @@ header .nav__buttons .donate__btn:hover {
   position: relative;
 }
 .footer-section .triangle-below {
-  width: 0px;
+  min-width: 0px;
   height: 0px;
   border-left: 720px solid transparent;
   border-right: 720px solid transparent;
@@ -401,9 +434,10 @@ header .nav__buttons .donate__btn:hover {
   position: absolute;
   left: 0px;
   top: -115px;
+  z-index: 1;
 }
 .footer-section .triangle-above {
-  width: 0px;
+  min-width: 0px;
   height: 0px;
   border-left: 720px solid transparent;
   border-right: 720px solid transparent;
@@ -411,6 +445,7 @@ header .nav__buttons .donate__btn:hover {
   position: absolute;
   left: 0px;
   top: -83px;
+  z-index: 2;
 }
 .footer-section .footer-content {
   display: flex;

@@ -22,8 +22,16 @@ body {
 }
 
 // Header and Navigation
-header {
+header {  
     .nav{
+      @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        padding: 20px 5%;
+      }
         display: flex;
         justify-content: flex-end; // Pushes all content to the right
         height: 117px;
@@ -31,16 +39,27 @@ header {
         background-color: $secondary-color;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         gap: 30px; // Adds spacing between elements
-        margin-left: 41px;
+        /*margin-left: 41px;
         margin-right: 76px;
-        margin-bottom: 15px;
+        margin-bottom: 15px;*/
+        margin:0 auto;
+        max-width: 1440px;
 
         // Navigation Links
         &__links {
+          @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            height: auto;
+            padding: 20px 5%;
+          }
             list-style: none;
             display: flex;
             gap: 20px;
             align-items: center;
+            margin-right:130px;
             li {
                 a {
                     text-decoration: none;
@@ -104,8 +123,8 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
   align-items: center;
   justify-content: space-between;
   padding: 60px 4%;
-  margin-left: 41px;
-  margin-right: 76px;
+  margin:0 auto;
+  max-width: 1440px;
 
 
   // For responsiveness: stack on smaller screens
@@ -159,7 +178,9 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
     justify-content: center;
     padding: 40px 5%;
     background-color: #f9f9f9; // Adjust as needed
-    gap: 20px; // Space between image and info
+    gap: 40px; // Space between image and info
+    margin:0 auto;
+    max-width: 1440px;
   
     // On smaller screens, stack them vertically
     @media (max-width: 768px) {
@@ -171,6 +192,7 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
       flex: 1; // Takes up 50% width if there's room
       display: flex;
       justify-content: center;
+      max-width: 400px;
   
       img {
         width: 100%;
@@ -185,11 +207,9 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
     .event-section-right {
       background-color: #fff;
       padding: 20px 5%;
-      margin: 20px auto;
-      max-width: 900px;        // Adjust as needed
+      max-width: 670px;        // Adjust as needed
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      margin-right: 45px;
     
       .event-right-content {
         display: flex;
@@ -272,6 +292,8 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
 .cards{
   display: grid;
   place-items: center;
+  margin:0 auto;
+  max-width: 1440px;
   .cards-container {
     
     display: grid;
@@ -298,10 +320,19 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
     .card-image {
       position: relative;
   
-      img {
+      /*img {
         width: 100%;
         height: auto;
         display: block;
+        position: relative;*/
+
+         .icon {
+          position: absolute;
+          max-width: 47px;
+          top: 5px;
+          right: 20px;
+         }
+      
       }
   
       /* Optional share icon if you want it here
@@ -369,8 +400,6 @@ $blue-bg: #102364; // You can adjust the blue shade as needed
       font-weight: 800;
     }
   }
-
-}
 
 
 
@@ -496,7 +525,7 @@ $pink-text: #F33C5C; // for headings and accent text
   position: relative;
 
   .triangle-below {
-    width: 0px;
+    min-width: 0px;
     height: 0px;
     border-left: 720px solid transparent;
     border-right: 720px solid transparent;
@@ -504,9 +533,10 @@ $pink-text: #F33C5C; // for headings and accent text
     position: absolute;
     left: 0px;
     top: -115px;
+    z-index: 1;
   }
   .triangle-above {
-    width: 0px;
+    min-width: 0px;
     height: 0px;
     border-left: 720px solid transparent;
     border-right: 720px solid transparent;
@@ -514,6 +544,7 @@ $pink-text: #F33C5C; // for headings and accent text
     position: absolute;
     left: 0px;
     top: -83px;
+    z-index: 2;
   }
   
   // Outer container for left & right columns
